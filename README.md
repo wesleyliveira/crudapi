@@ -13,3 +13,5 @@ php artisan migrate                           <EXECUTANDO AS MIGRATIONS>
 php artisan serve                             <SUBINDO PROJETO>
 
 php artisan make:controller UserController    <CRIANDO CONTROLLER>
+
+php artisan make:request UserRequest          <CRIANDO REQUEST>
