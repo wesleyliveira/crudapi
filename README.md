@@ -2,6 +2,8 @@
 
 composer create-project laravel/laravel .     <CRIA O PROJETO DENTRO DA PASTA>
 
+composer install                              <Instalar as dependências do PHP>
+
 php artisan install:api                       <INSTALA ARQUIVO DE ROTAS PARA API>
 
 php artisan make:seeder UserSeeder            <CRIANDO SEED>
