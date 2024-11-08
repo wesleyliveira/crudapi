@@ -94,8 +94,21 @@ class UserController extends Controller
             ], 400);
         }
     }
-    public function destroy()
+    public function destroy(User $user): JsonResponse #APAGAR DADOS
     {
-        dd("apagar");
+        try {
+            $user->delete();
+            return response()->json([
+                'status'=> true,
+                'user'=> $user,
+                'message'=> 'Usuário apagado com sucesso',
+            ], 200);
+
+    }catch(Exception $e) {
+        return response()->json([
+            "status"=> false,
+            "message"=> "Usuário excluído!",
+            ] , 400);
+        }
     }
 }

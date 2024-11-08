@@ -26,11 +26,10 @@ class UserRequest extends FormRequest
 
     public function rules(): array
     {
-        #RECUPERA O ID ENVIADO NA URL
         $userId = $this->route('user');
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . ($userId ? $userId->id : null),
+            'email' => 'required|email|unique:users,email,' . ($userId ? $userId->id : 'NULL'),
             'password' => 'required|min:6'
         ];
     }
